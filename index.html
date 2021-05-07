@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <title>photo click test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xmc7isb.css">
+    <!-- <script src="script.js"></script> -->
+  </head>
+  <body onload = "followMouse();">
+         <div id="brain"><img src="assets/click-01.png" alt="whoops"></div>
+
+         <script type="text/javascript">
+        var $ = document.querySelector.bind(document);
+        var $on = document.addEventListener.bind(document);
+
+        var xmouse, ymouse;
+        $on('mousemove', function (e) {
+             xmouse = e.clientX || e.pageX;
+             ymouse = e.clientY || e.pageY;
+        });
+
+        var brain = $('#brain');
+        var x = void 0,
+             y = void 0,
+             dx = void 0,
+             dy = void 0,
+             tx = 0,
+             ty = 0,
+             key = -1;
+
+        var followMouse = function followMouse() {
+             key = requestAnimationFrame(followMouse);
+
+             if(!x || !y) {
+                  x = xmouse;
+                  y = ymouse;
+             } else {
+                  dx = (xmouse - x) * 0.15;
+                  dy = (ymouse - y) * 0.15;
+                  if(Math.abs(dx) + Math.abs(dy) < 0.1) {
+                       x = xmouse;
+                       y = ymouse;
+                  } else {
+                       x += dx;
+                       y += dy;
+                  }
+             }
+             brain.style.left = x - 45 + 'px';
+             brain.style.top = y - 50 + 'px';
+        };
+
+        </script>
+
+    <div id="header">
+      <a href="index2.html"></a>THE SHAPE OF SOUND
+  </div>
+
+  <audio controls autoplay>
+    <!-- <source src="horse.ogg" type="audio/ogg"> -->
+      <source src="assets/2-2_brian-eno.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+      <div id="container">
+        <marquee id="background001" behavior="scroll" direction="up"; scrollamount="4">
+         I wanna walk through the park in the dark<br>
+         onto you are mine <br>
+         Got a flamin' heart but you ain't los<br>
+         Eyes on the wall<br><br>
+         It ain't shine, it's red tape<br>
+         Don't you ever see my blooms?<br>
+         On the radio it's call the color of the sun<br>
+         You're a celebrity and you're a celebrity<br>
+         Oh, my, my such a sweet thing<br>
+         I'm on some other wavelength<br><br>
+         The sun never really comes<br><br>
+         But I'm looking for a friend of mine<br>
+         That's when I look inside my eyes<br>
+         It's like rain, la...<br><br>
+         It's a crime, la...<br><br>
+         It's a time of grace, a seed, a flame<br>
+         That's what you're born into<br>
+         Eyes on the wall, darling darling, yeah<br>
+         It's a crime, la...<br><br>
+         Oh, my, my heavenly colors<br><br>
+         It's a crime, la...<br>
+         It's a time of grace, a seed, a flame that's...<br>
+         Hmmm, what you're born into<br>
+         All that night and all the next<br>
+         Have you got in common?<br><br>
+         What you need is a knife<br>
+         That shoots at me like Lucifer<br>
+         All that night and all the next<br>
+         What you need is a knife<br>
+         That shoots at me like Lucifer<br><br>
+         All that night and all the next<br>
+         What you need is a knife<br>
+         That shoots at me like Lucifer<br>
+         All the nights are cold, yeah<br>
+         La glowin' from the sun<br><br>
+         What you're born into<br><br><br>
+
+         That shoots at me like Lucifer<br><br><br>
+         All the nights are cold, yeah<br><br>
+         Oh yeah<br><br>
+         What you need is a knife<br>
+         That shoots at me like Lucifer<br>
+         All that night and all the next<br>
+         What you need is a knife<br>
+         That shoots at me like Lucifer<br><br><br>
+         I gotta sleep<br><br><br>
+         at night and my dog and putty things on<br>
+         I'm gonna lie<br>
+         So we were all waiting for you<br>
+         Just say the words get me out<br>
+         I'm scared and scared<br><br>
+         I want your number<br>
+         I'm gonna be right in your face<br>
+         Just tell me that you come to me<br>
+         Tell me that you come over just to watch me do my things<br>
+         You better know me<br><br>
+         I'm home with you<br>
+         I'm watching a show tonight<br>
+         I'm going insane<br>
+         You're a veteran<br>
+         Watch the first scene<br><br>
+         It's been a while but it's like it now<br>
+         It's like a long time now<br>
+         You're my golden hour<br>
+         And I'm sorry, but you come over<br>
+         Just to see the gold in my eyes<br><br>
+         I'm so glad that you've come over<br>
+         Now I want your number<br>
+         I'm hoping that you come over<br>
+         Didn't you know?<br><br><br>
+         Well I'm sorry, but you came over just to see the gold<br><br>
+         You're my golden hour<br>
+         And I'm hoping that you come over<br>
+         Oh yeah, oh, oh, oh,<br>
+         And all the things I want you are<br>
+           </marquee>
+      </div>
+
+<script src="script.js"></script>
+  </body>
+</html>

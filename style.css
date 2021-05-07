@@ -1,0 +1,96 @@
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+* {
+    cursor: none;
+}
+
+body {
+  font-family: ivypresto-display, serif;
+  font-weight: 300;
+  font-style: normal;
+	font-size: 90px;
+	line-height: 1.5;
+  text-align: center;
+	color: black;
+  mix-blend-mode: difference;
+  /* overflow: hidden; */
+}
+
+#background001:hover{
+  filter:blur(13px);
+}
+
+#header {
+  font-weight: 200;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 30px;
+  color: #323233;
+  user-select: none;
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1;}
+}
+
+img{
+  position: absolute;
+  top: 200px;
+  left: 200px;
+	width: 1200px;
+  transform: translate(-50%, -50%) scale(0.5);
+  animation: fadein 1.3s;
+  z-index: -1;
+}
+
+
+#brain {
+    z-index: 2000;
+     width: 130px;
+     height: 200px;
+     background: none;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     margin: -10px 0 0 -10px;
+     pointer-events: none;
+     text-align: center;
+}
+
+#brain img
+{ width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+}
+
+audio {
+  position: fixed;
+  left: 87%;
+  bottom: 92%;
+  z-index: 1000;
+}
+
+#background001 {
+text-align: center;
+font-size: 100%;
+color: black;
+z-index: 1000;
+width:100vw;
+height: 100vh;
+}
